@@ -10,7 +10,7 @@
   --surface-strong: #ffffff;
   --surface-soft: #eef7f7;
   --text: #0f172a;
-  --text-muted: #52606d;
+  --text-muted: #3a4556;
   --border: rgba(13, 115, 119, 0.12);
   --shadow: 0 25px 80px rgba(13, 115, 119, 0.12);
   --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.08);
@@ -744,6 +744,7 @@ p {
   }
 
   .nav-links.active {
+    display: flex !important;
     position: fixed;
     inset: 6rem 1rem auto 1rem;
     padding: 1.5rem;
@@ -754,6 +755,7 @@ p {
     flex-direction: column;
     gap: 1rem;
     z-index: 100;
+    list-style: none;
   }
 
   .nav-links li {
