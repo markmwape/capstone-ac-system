@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
       e.preventDefault()
       e.stopPropagation()
       navLinks.classList.toggle('active')
+      menuToggle.classList.toggle('active')
     })
 
     // Close menu when clicking a nav link
@@ -16,15 +17,15 @@ document.addEventListener('DOMContentLoaded', function() {
     allLinks.forEach(link => {
       link.addEventListener('click', function() {
         navLinks.classList.remove('active')
+        menuToggle.classList.remove('active')
       })
     })
 
-    // Close menu when clicking outside
-    document.addEventListener('click', function(e) {
-      if (navLinks.classList.contains('active')) {
-        if (!navLinks.contains(e.target) && e.target !== menuToggle) {
-          navLinks.classList.remove('active')
-        }
+    // Close menu when clicking on the overlay (background)
+    navLinks.addEventListener('click', function(e) {
+      if (e.target === navLinks) {
+        navLinks.classList.remove('active')
+        menuToggle.classList.remove('active')
       }
     })
   }
