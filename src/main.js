@@ -4,11 +4,21 @@ import './style.css'
 const menuToggle = document.getElementById('menuToggle')
 const navLinks = document.querySelector('.nav-links')
 
-if (menuToggle) {
-  menuToggle.addEventListener('click', () => {
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener('click', (e) => {
+    e.stopPropagation()
     navLinks.classList.toggle('active')
   })
 }
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+  if (navLinks && navLinks.classList.contains('active')) {
+    if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+      navLinks.classList.remove('active')
+    }
+  }
+})
 
 // Close mobile menu when a link is clicked
 if (navLinks) {
@@ -102,13 +112,3 @@ style.textContent = `
 document.head.appendChild(style)
 
 console.log('✓ Greenflow Dynamics website loaded successfully!')
-      <li><a href="https://bsky.app/profile/vite.dev" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#bluesky-icon"></use></svg>Bluesky</a></li>
-    </ul>
-  </div>
-</section>
-
-<div class="ticks"></div>
-<section id="spacer"></section>
-`
-
-setupCounter(document.querySelector('#counter'))
