@@ -267,6 +267,12 @@ p {
   border: 1px solid rgba(13, 115, 119, 0.16);
 }
 
+.hero .btn-secondary {
+  background: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
 .btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 20px 45px rgba(13, 115, 119, 0.16);
@@ -330,13 +336,13 @@ p {
 .hero-subtitle {
   margin-top: 1rem;
   font-size: clamp(1rem, 2vw, 1.45rem);
-  color: rgba(15, 23, 42, 0.78);
+  color: #ffffff;
 }
 
 .hero-description {
   margin: 2rem 0 2.5rem;
   font-size: 1rem;
-  color: var(--text-muted);
+  color: #ffffff;
 }
 
 .hero-buttons {
