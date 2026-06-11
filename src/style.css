@@ -408,7 +408,7 @@ p {
 }
 
 .stat-card p {
-  color: var(--text-muted);
+  color: var(--text);
   font-size: 0.98rem;
 }
 
