@@ -1,3 +1,5 @@
+import './style.css'
+
 document.addEventListener('DOMContentLoaded', function() {
   // Mobile Menu Toggle - Simple and Direct
   const menuToggle = document.getElementById('menuToggle')
